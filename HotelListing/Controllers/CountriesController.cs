@@ -110,7 +110,7 @@ namespace HotelListing.Controllers
 
             //_context.Countries.Add(country);
             //await _countriesRepository.UpdateAsync();
-            _countriesRepository.AddAsync(country);
+            await _countriesRepository.AddAsync(country);
 
 
             return CreatedAtAction("GetCountry", new { id = country.Id }, country);
@@ -128,7 +128,7 @@ namespace HotelListing.Controllers
 
             //_context.Countries.Remove(country);
             //await _context.SaveChangesAsync();
-            _countriesRepository.DeleteAsync(id);
+            await _countriesRepository.DeleteAsync(id);
 
             return NoContent();
         }
