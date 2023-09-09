@@ -68,9 +68,9 @@ namespace HotelListing.Controllers
                 throw new NotFoundException(nameof(GetCountry), id);
             }
 
-            var response = _mapper.Map<CountryDto>(country);
+            //var response = _mapper.Map<CountryDto>(country);
 
-            return response;
+            return country;
         }
 
         // PUT: api/Countries/5
